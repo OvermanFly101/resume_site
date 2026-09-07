@@ -95,6 +95,17 @@
       font-weight: 700;
       letter-spacing: -0.02em;
     }
+    
+    .flex-container {
+      display: flex;       /* Activates Flexbox and puts items side by side */
+      gap: 15px;           /* Adds clean, modern spacing between your divs */
+    }
+    
+    .flex-child {
+      flex: 1;             /* Optional: Gives all divs equal, responsive width */
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
 
     p.site-subtitle {
       margin: 0;
@@ -211,7 +222,19 @@
 
     <header class="site-header">
       <h1 class="site-title">Flynn Antonacci</h1>
-      <p class="entry-sub">(970) 409 - 2700 | <a href="mailto:flynn.antonacci@gmail.com">flynn.antonacci@gmail.com</a> |  LinkedIn </p>
+      <!--
+      <p class="entry-sub">##### | <a href="mailto:flynn.antonacci@gmail.com">Email</a> |  LinkedIn </p>
+      -->
+      <div class="flexbox">
+        <div class="flex-child">
+          <p class="entry-sub">##### | <a href="mailto:flynn.antonacci@gmail.com">Email</a> |  </p>
+        </div>
+        <div class="flex-child">
+          <a href="https://www.linkedin.com/in/flynnantonacci/" target="_blank">
+            <img src="/linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
       <p class="site-subtitle">Systems engineer and Air Force–trained ground equipment technician who solves problems on real hardware, seeking to plan and execute ground and flight test campaigns that put the U.S. and its allies on the high ground in space.</p>
     </header>
 
